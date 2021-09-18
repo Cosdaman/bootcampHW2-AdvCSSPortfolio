@@ -1,4 +1,81 @@
-.contentPlaceholder1 h1{
-    font-size: 30px;
+:root{
+    --lightcolor: aquamarine;
+    --darkcolor: gray;
+    --gradientdark: rgba(41, 5, 43, 0.5) 0%;
+    --gradientlight: rgba(204, 43, 209, 0.6) 100%;
+    --cardHoverColor: #aa4545;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color:var(--lightcolor);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    padding: 10px 10px;
+    text-decoration: none;
     text-align: center;
+  }
+
+  h3{
+    font-size: 50px;
+    text-align: center;
+}
+
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+  .projects{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.card {
+    background-image: 
+    linear-gradient(
+    var(--gradientdark), var(--gradientlight)
+    );    
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    transition: all 0.5s ease-in-out;
+    max-width: 400px;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+
+  .card header{
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+    background-color: purple;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .projects,
+    nav {
+      flex-direction: column;
+    }
+  }
+  
+.card:hover{
+    box-shadow: 10px 10px 10px 10px var(--cardHoverColor);
 }
