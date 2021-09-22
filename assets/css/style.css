@@ -55,10 +55,30 @@ nav a {
   background-color: white;
 }
 
-  h3{
+  h2{
     font-size: 50px;
     text-align: center;
     color: rgb(165, 165, 165);
+}
+
+h3{
+  position: absolute;
+  font-size: 3em;
+  margin: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  opacity: 100%;
+  background-color:black;
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 10px;
+  opacity: 0;
+  user-select: none;
+  transition: all 0.4s ease-in-out;
 }
 
 
@@ -88,23 +108,25 @@ p{
 }
 
 .card{
-  max-height: 200px;
+  max-height: 400px;
   flex-basis: 5rem;
 }
 
 .card, 
 .cardMain {
-    background-color: var(--lightcolor2);
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 5px 5px 2px black;
-    transition: all 0.4s ease-in-out;
-    margin-bottom: 50px;
-    margin: 20px;
-    min-width: 300px;
-    min-height: 300px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+  position: relative;
+  display: inline-block;
+  background-color: var(--lightcolor2);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 5px 5px 2px black;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 50px;
+  margin: 20px;
+  min-width: 400px;
+  min-height: 300px;
+  overflow-y: hidden;
+  overflow-x: hidden;
     }
 
   .card header,
@@ -117,8 +139,12 @@ p{
 .cardImage{
   object-fit: cover;
   opacity: 0.5;
+  filter: blur(8px);
   transition: all 0.4s ease-in-out;
+  z-index: 1;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .projects,
@@ -142,6 +168,11 @@ p{
     box-shadow: 10px 10px 10px 10px black;
 }
 
+.card:hover h3,
+.cardMain:hover h3{
+  opacity: 1;
+}
+
 .cardImage:hover{
-  opacity: 0.7;
+  opacity: 0.9;
 }
