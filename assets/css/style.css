@@ -1,6 +1,8 @@
 :root{
-    --lightcolor: aquamarine;
-    --darkcolor: gray;
+    --lightcolor: #19129c;
+    --lightcolor2:  #2b268f;
+    --darkcolor: #3a3682;
+    --darkcolor2: #454376;
     --gradientdark: rgba(41, 5, 43, 0.5) 0%;
     --gradientlight: rgba(204, 43, 209, 0.6) 100%;
     --cardHoverColor: #aa4545;
@@ -10,25 +12,50 @@
     box-sizing: border-box;
   }
 
-  header {
-    background-color:var(--lightcolor);
-}
+  body{
+    background-color: var(--darkcolor2);
+  }
 
+  header {
+    display:inline-block;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
 
 nav {
     display: flex;
     justify-content: space-around;
+    background-color: black;
 }
 
 nav a {
     padding: 10px 10px;
     text-decoration: none;
     text-align: center;
+    color: white;
   }
+
+.profile{
+  padding: 20px;
+  }
+
+.profilePhoto{
+  object-fit: scale-down;
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 1px;
+}
 
   h3{
     font-size: 50px;
     text-align: center;
+    color: white;
 }
 
 
@@ -46,17 +73,15 @@ body {
 }
 
 .card {
-    background-image: 
-    linear-gradient(
-    var(--gradientdark), var(--gradientlight)
-    );    
+    background-color: var(--lightcolor2);
     border-style: solid;
     border-width: 1px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px black;
     transition: all 0.5s ease-in-out;
     max-width: 400px;
     padding: 30px;
     margin-bottom: 50px;
+    color: white;
   }
 
   .card header{
@@ -64,7 +89,7 @@ body {
     font-size: 30px;
     position: relative;
     top: -30px;
-    background-color: purple;
+    background-color: var(--darkcolor1);
     border-style: solid;
     border-width: 1px;
 }
