@@ -17,10 +17,10 @@
   header {
     display:inline-block;
     width: 100%;
-    z-index: 0;
-    text-align: center;
+    text-align: left;
     background-color: black;
     color: var(--headerColors);
+    padding: 20px;
   }
 
 nav {
@@ -29,7 +29,7 @@ nav {
     background-color: black;
 }
 
-a{
+nav a{
   color: var(--headerColors);
 }
 
@@ -172,4 +172,3 @@ p{
 .cardImage:hover{
   opacity: .9;
 }
-
